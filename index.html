@@ -3,53 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Bio</title>
+    <title>Graduate Student Bio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            display: flex;
+            height: 100vh;
         }
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            display: flex;
+            width: 100%;
         }
-        #main-header {
-            background-color: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #0779e4 3px solid;
-        }
-        #main-header h1 {
-            text-align: center;
-            text-transform: uppercase;
-            margin: 0;
-            font-size: 24px;
-        }
-        #bio {
+        .left-half, .right-half {
             padding: 20px;
-            background: #fff;
-            margin-top: 20px;
-            border: #ccc 1px solid;
+            box-sizing: border-box;
+        }
+        .left-half {
+            width: 40%;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .right-half {
+            width: 60%;
+            overflow-y: auto;
+        }
+        img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        h2 {
+            margin: 20px 0 10px;
+        }
+        .section-title {
+            margin-top: 40px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .publications {
+            height: 150px;
+            overflow-y: scroll;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <header id="main-header">
-        <div class="container">
-            <h1>About Me</h1>
-        </div>
-    </header>
     <div class="container">
-        <section id="bio">
-            <h2>My Bio</h2>
-            <p>Hello! I'm John Doe, a software developer with a passion for creating web applications. I have experience in HTML, CSS, JavaScript, and Python. I enjoy working on open-source projects and contributing to the tech community.</p>
-            <p>Feel free to check out my projects and connect with me on GitHub.</p>
-        </section>
+        <div class="left-half">
+            <img src="/Users/uddalok/Pictures/uddalok_linkedin.jpeg" alt="Your Photo">
+            <h2>About</h2>
+            <p>Write a brief introduction about yourself here.</p>
+            <div class="social-links">
+                <h3>Follow Me</h3>
+                <a href="https://twitter.com/yourprofile">Twitter</a>
+                <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+                <a href="https://github.com/yourprofile">GitHub</a>
+            </div>
+        </div>
+        <div class="right-half">
+            <div class="section">
+                <h2 class="section-title">Education and Work Experience</h2>
+                <p><strong>Ph.D. in [Your Field]</strong></p>
+                <p>University Name, Year - Present</p>
+                <p><strong>Master's in [Your Field]</strong></p>
+                <p>University Name, Year - Year</p>
+                <p><strong>Bachelor's in [Your Field]</strong></p>
+                <p>University Name, Year - Year</p>
+                <p><strong>Work Experience</strong></p>
+                <p>Job Title, Company, Year - Year</p>
+                <p>Job Title, Company, Year - Year</p>
+            </div>
+            <div class="section">
+                <h2 class="section-title">Publications</h2>
+                <div class="publications">
+                    <p>Publication 1: Title, Journal, Year</p>
+                    <p>Publication 2: Title, Journal, Year</p>
+                    <p>Publication 3: Title, Journal, Year</p>
+                    <p>Publication 4: Title, Journal, Year</p>
+                    <p>Publication 5: Title, Journal, Year</p>
+                    <p>Publication 6: Title, Journal, Year</p>
+                    <p>Publication 7: Title, Journal, Year</p>
+                    <p>Publication 8: Title, Journal, Year</p>
+                    <!-- Add more publications as needed -->
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="section-title">Beyond the Desk</h2>
+                <p>Write about your hobbies, interests, and other activities outside of academia here.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
